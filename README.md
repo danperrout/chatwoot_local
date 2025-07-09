@@ -18,20 +18,24 @@ Este projeto permite subir facilmente, em ambiente **local**, os serviços do **
 
 1. **Clone este repositório:**
    ```sh
-   git clone <url-do-repositorio>
+   git clone https://github.com/danperrout/chatwoot_local.git
    cd chatwoot_local
    ```
+2. Prepare o banco de dados para o Chatwoot
+   ```sh
+   docker compose run --rm rails bundle exec rails db:chatwoot_prepare
+   ```
 
-2. **Suba os serviços:**
+3. **Suba os serviços:**
    ```sh
    docker-compose up -d
    ```
 
-3. **Acesse o Chatwoot:**
+4. **Acesse o Chatwoot:**
 
    [http://localhost:3000](http://localhost:3000)
 
-4. **Acesse a Evolution API:**
+5. **Acesse a Evolution API:**
 
    [http://localhost:8080](http://localhost:8080)
 
