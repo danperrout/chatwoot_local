@@ -2,7 +2,7 @@ version: '3'
 
 services:
   base: &base
-    image: chatwoot/chatwoot:latest
+    image: chatwoot/chatwoot:v4.0.1
     env_file: .env ## Change this file for customized env variables
     volumes:
       - storage_data:/app/storage
@@ -59,7 +59,7 @@ services:
 
   api:
     container_name: evolution_api
-    image: evoapicloud/evolution-api:latest
+    image: atendai/evolution-api:latest
     restart: always
     depends_on:
       - redis
